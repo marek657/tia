@@ -17,10 +17,9 @@ class UserController extends CI_Controller
 		} else {
 			$data['logged_in'] = $this->session->userdata['logged_in'];
 			$data['function'] = $this->session->userdata['function'];
-			$data2['name'] = $this->session->userdata('name');
+			$data2['name'] = $this->session->userdata['name'];
 			$data['data'] = $data2;
 		}
-
 		$data['main_content'] = 'welcome';
 		$this->load->view('template', $data);
 
